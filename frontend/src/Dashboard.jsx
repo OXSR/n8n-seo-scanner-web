@@ -11,13 +11,13 @@ function Dashboard({ token }) {
   const fetchDashboardData = async () => {
     setLoading(true);
     try {
-      const keyRes = await fetch('http://localhost:3001/api/keys/my', {
+      const keyRes = await fetch('https://n8n-seo-scanner-web.onrender.com/api/keys/my', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const keyJson = await keyRes.json();
       setKeyData(keyJson.key);
 
-      const histRes = await fetch('http://localhost:3001/api/history', {
+      const histRes = await fetch('https://n8n-seo-scanner-web.onrender.com/api/history', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const histJson = await histRes.json();
@@ -36,7 +36,7 @@ function Dashboard({ token }) {
 
   const handleGenerateKey = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/keys/generate', {
+      const res = await fetch('https://n8n-seo-scanner-web.onrender.com/api/keys/generate', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -53,7 +53,7 @@ function Dashboard({ token }) {
 
   const handleToggleKey = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/keys/toggle', {
+      const res = await fetch('https://n8n-seo-scanner-web.onrender.com/api/keys/toggle', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` }
       });

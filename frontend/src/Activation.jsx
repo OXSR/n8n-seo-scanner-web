@@ -11,7 +11,7 @@ function Activation() {
     setStatus({ loading: true, error: null, success: null });
 
     try {
-      const response = await fetch('http://localhost:3001/api/keys/activate', {
+      const response = await fetch('https://n8n-seo-scanner-web.onrender.com/api/keys/activate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
