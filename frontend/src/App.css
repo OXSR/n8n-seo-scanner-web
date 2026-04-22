@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-brand {
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.nav-links button:hover {
+  color: var(--text-main);
+  background-color: var(--bg-card-hover);
+}
+
+.nav-links button.active {
+  color: var(--primary);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.btn-logout {
+  color: #fca5a5 !important;
+}
+
+.btn-logout:hover {
+  background-color: var(--danger-bg) !important;
+  color: var(--danger) !important;
+}
+
+.main-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.welcome-screen {
+  max-width: 600px;
+  margin: 4rem auto;
+  background-color: var(--bg-card);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.welcome-screen h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-screen p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
